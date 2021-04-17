@@ -7,7 +7,8 @@ import 'scenery_theme.dart';
 /// You can add themes for your own custom widgets here.
 /// NB: for this challenge, it is only required to modify sceneryThemeData
 class CustomWidgetThemes {
-  static CustomWidgetThemes of(BuildContext context) => CustomWidgetThemes._(context);
+  static CustomWidgetThemes of(BuildContext context) =>
+      CustomWidgetThemes._(context);
 
   SceneryThemeData? sceneryThemeData;
 
@@ -19,29 +20,29 @@ class CustomWidgetThemes {
     switch (themeType) {
       case ThemeType.Light:
         sceneryThemeData = SceneryThemeData(
-          skyFillColor: Colors.grey,
-          mountainFillColor: Colors.blueGrey,
-          waterFillColor: Colors.blueGrey[800]!,
+          skyFillColor: Colors.yellow[50]!,
+          mountainFillColor: Colors.green[300]!,
+          waterFillColor: Colors.blue[800]!,
           drawMoon: false,
           drawSun: true,
         );
         break;
       case ThemeType.Dark:
         sceneryThemeData = SceneryThemeData(
-          skyFillColor: Colors.grey,
-          mountainFillColor: Colors.blueGrey,
-          waterFillColor: Colors.blueGrey[800]!,
+          skyFillColor: Colors.deepPurple[900]!,
+          mountainFillColor: Colors.green[900]!,
+          waterFillColor: Colors.lightBlue[900]!,
           drawMoon: true,
           drawSun: false,
         );
         break;
       case ThemeType.Other:
         sceneryThemeData = SceneryThemeData(
-          skyFillColor: Colors.grey,
-          mountainFillColor: Colors.blueGrey,
-          waterFillColor: Colors.blueGrey[800]!,
-          drawMoon: true,
-          drawSun: true,
+          skyFillColor: Colors.lightBlue[300]!,
+          mountainFillColor: Colors.pink,
+          waterFillColor: Colors.purple[100]!,
+          drawMoon: false,
+          drawSun: false,
         );
         break;
     }

@@ -22,12 +22,18 @@ class _SceneryState extends State<Scenery> {
         children: [
           CustomPaint(
             foregroundPainter: SceneryPainter(
-              skyColor: CustomWidgetThemes.of(context).sceneryThemeData!.skyFillColor,
-              waterColor: CustomWidgetThemes.of(context).sceneryThemeData!.waterFillColor,
-              mountainColor: CustomWidgetThemes.of(context).sceneryThemeData!.mountainFillColor,
+              skyColor:
+                  CustomWidgetThemes.of(context).sceneryThemeData!.skyFillColor,
+              waterColor: CustomWidgetThemes.of(context)
+                  .sceneryThemeData!
+                  .waterFillColor,
+              mountainColor: CustomWidgetThemes.of(context)
+                  .sceneryThemeData!
+                  .mountainFillColor,
               textHeight: _textAreaHeight,
               drawSun: CustomWidgetThemes.of(context).sceneryThemeData!.drawSun,
-              drawMoon: CustomWidgetThemes.of(context).sceneryThemeData!.drawMoon,
+              drawMoon:
+                  CustomWidgetThemes.of(context).sceneryThemeData!.drawMoon,
             ),
             child: Container(),
           ),
@@ -38,6 +44,7 @@ class _SceneryState extends State<Scenery> {
               height: _textAreaHeight,
               width: constraints.maxWidth,
               child: const SomeText(),
+              color: Theme.of(context).backgroundColor,
             ),
           ),
           Positioned(
@@ -56,7 +63,8 @@ class _SceneryState extends State<Scenery> {
                         title: const Text('Light'),
                         groupValue: myTheme.themeType,
                         value: ThemeType.Light,
-                        onChanged: (ThemeType? mode) => myTheme.setThemeType(ThemeType.Light),
+                        onChanged: (ThemeType? mode) =>
+                            myTheme.setThemeType(ThemeType.Light),
                       ),
                     ),
                     Expanded(
@@ -65,7 +73,8 @@ class _SceneryState extends State<Scenery> {
                         title: const Text('Dark'),
                         groupValue: myTheme.themeType,
                         value: ThemeType.Dark,
-                        onChanged: (ThemeType? mode) => myTheme.setThemeType(ThemeType.Dark),
+                        onChanged: (ThemeType? mode) =>
+                            myTheme.setThemeType(ThemeType.Dark),
                       ),
                     ),
                     Expanded(
@@ -74,7 +83,8 @@ class _SceneryState extends State<Scenery> {
                         title: const Text('Other'),
                         groupValue: myTheme.themeType,
                         value: ThemeType.Other,
-                        onChanged: (ThemeType? mode) => myTheme.setThemeType(ThemeType.Other),
+                        onChanged: (ThemeType? mode) =>
+                            myTheme.setThemeType(ThemeType.Other),
                       ),
                     ),
                   ],

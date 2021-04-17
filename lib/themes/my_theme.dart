@@ -29,11 +29,38 @@ class MyTheme with ChangeNotifier {
   ThemeData get currentThemeData {
     switch (themeType) {
       case ThemeType.Light:
-        return ThemeData();
+        return ThemeData(
+          primarySwatch: Colors.amber,
+          backgroundColor: Colors.blue[800]!,
+          textTheme: TextTheme(
+            headline3: TextStyle(color: Colors.white),
+            subtitle1:
+                TextStyle(color: Colors.white, fontStyle: FontStyle.italic),
+            bodyText1: TextStyle(color: Colors.white, height: 2),
+          ),
+        );
       case ThemeType.Dark:
-        return ThemeData();
+        return ThemeData(
+          primarySwatch: Colors.deepPurple,
+          backgroundColor: Colors.lightBlue[900]!,
+          textTheme: TextTheme(
+            headline3: TextStyle(color: Colors.white),
+            subtitle1:
+                TextStyle(color: Colors.white, fontStyle: FontStyle.italic),
+            bodyText1: TextStyle(color: Colors.white, height: 2),
+          ),
+        );
       case ThemeType.Other:
-        return ThemeData();
+        return ThemeData(
+          primarySwatch: Colors.pink,
+          backgroundColor: Colors.purple[100]!,
+          textTheme: TextTheme(
+            headline3: TextStyle(color: Colors.black87),
+            subtitle1:
+                TextStyle(color: Colors.black87, fontStyle: FontStyle.italic),
+            bodyText1: TextStyle(color: Colors.black87, height: 2),
+          ),
+        );
     }
   }
 }
